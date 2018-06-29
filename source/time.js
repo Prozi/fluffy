@@ -21,17 +21,7 @@ function getTimeBrowser () {
   return Date.now()
 }
 
-function isPropablyNode () {
-  return (typeof process !== 'undefined')
-  	&& (typeof process.env !== 'undefined')
-  	&& (typeof process.env.NODE_ENV !== 'undefined')
-}
-
-module.exports = isPropablyNode()
-  ? getTimeNode
-  : (typeof performance !== 'undefined')
-  	? getTimeModernBrowser
-  	: getTimeBrowser
+module.exports = (typeof performance !== 'undefined') ? getTimeModernBrowser : getTimeBrowser
 
 module.exports.default = module.exports
 
