@@ -7,9 +7,9 @@
 ## the only docs you'll need
 
 ```javascript
-// import { Fluffy } from 'fluffy-memleak'
-// const { Fluffy } = require('fluffy-memleak')
-var Fluffy = require('fluffy-memleak').Fluffy
+// import Fluffy from 'fluffy-memleak'
+// const Fluffy = require('fluffy-memleak')
+var Fluffy = require('fluffy-memleak')
 
 // initialization
 var a = new Fluffy()
