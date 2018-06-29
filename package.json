@@ -1,0 +1,27 @@
+{
+  "name": "fluffy",
+  "version": "1.0.0",
+  "description": "Dont allow your fluffy memleak to grow, Fluffy detects memleaks",
+  "main": "source/index.js",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prozi/fluffy.git"
+  },
+  "keywords": [
+    "fluffy",
+    "memleak",
+    "detect",
+    "counter",
+    "time",
+    "memory"
+  ],
+  "author": "Jacek Pietal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Prozi/fluffy/issues"
+  },
+  "homepage": "https://github.com/Prozi/fluffy#readme"
+}
