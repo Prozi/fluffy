@@ -1,5 +1,5 @@
 {
-  "name": "fluffy",
+  "name": "fluffy-memleak",
   "version": "1.0.0",
   "description": "Dont allow your fluffy memleak to grow, Fluffy detects memleaks",
   "main": "source/index.js",
