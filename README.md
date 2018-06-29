@@ -2,14 +2,14 @@
 
 ## installation
 
-`yarn install fluffy --save`
+`yarn install fluffy-memleak --save`
 
 ## the only docs you'll need
 
 ```javascript
-// import { Fluffy } from 'fluffy'
-// const { Fluffy } = require('fluffy')
-var Fluffy = require('fluffy').Fluffy
+// import { Fluffy } from 'fluffy-memleak'
+// const { Fluffy } = require('fluffy-memleak')
+var Fluffy = require('fluffy-memleak').Fluffy
 
 // initialization
 var a = new Fluffy()
