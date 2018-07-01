@@ -13,7 +13,7 @@
 ```javascript
 // import Fluffy from 'fluffy-memleak'
 // const Fluffy = require('fluffy-memleak')
-var Fluffy = require('../source')
+var Fluffy = require('fluffy-memleak')
 var a = new Fluffy()
 
 a.time('1000ms')
