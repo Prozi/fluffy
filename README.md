@@ -4,25 +4,28 @@
 
 `yarn install fluffy-memleak --save`
 
+## test
+
+`yarn test`
+
 ## the only docs you'll need
 
 ```javascript
 // import Fluffy from 'fluffy-memleak'
 // const Fluffy = require('fluffy-memleak')
-var Fluffy = require('fluffy-memleak')
-
-// initialization
+var Fluffy = require('../source')
 var a = new Fluffy()
 
-// when you start
-a.time('debug')
+a.time('1000ms')
+a.time('0ms')
 
-// do some stuff
+setTimeout(() => {
+	a.timeEnd('1000ms')
+	console.log(a.debugAll())
+	process.exit(0)
+}, 1000)
 
-// when finished
-a.timeEnd('debug')
-
-// check results
+a.timeEnd('0ms')
 console.log(a.debugAll())
 ```
 
