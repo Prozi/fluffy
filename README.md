@@ -14,27 +14,33 @@
 // import Fluffy from 'fluffy-memleak'
 // const Fluffy = require('fluffy-memleak')
 var Fluffy = require('fluffy-memleak')
-var a = new Fluffy()
+var fluffy = new Fluffy()
 
-a.time('1000ms')
-a.time('0ms')
+fluffy.time('0ms')
+fluffy.time('500ms')
+fluffy.time('1000ms')
+
+fluffy.timeEnd('0ms')
 
 setTimeout(() => {
-  a.timeEnd('1000ms')
-  console.log(a.debugAll())
+  fluffy.timeEnd('500ms')
+}, 500)
+
+setTimeout(() => {
+  fluffy.timeEnd('1000ms')
+
+  // will print all that took > 250ms (500ms + 1000ms)
+  fluffy.log(fluffy.debugAll(250))
+
+  // will print this one, always
+  fluffy.log(fluffy.debug('0ms'))
+
+  // wont print anything, because it lasted 0ms < 1000ms
+  fluffy.log(fluffy.debug('0ms', 1000))
+
+  // end test
   process.exit(0)
 }, 1000)
-
-a.timeEnd('0ms')
-
-// will print both
-a.log(a.debugAll())
-
-// will print this one, always
-a.log(a.debug('1000ms'))
-
-// wont print anything, because it lasted 0ms < 1000ms
-a.log(a.debug('0ms', 1000))
 ```
 
 ## Author

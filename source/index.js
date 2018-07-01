@@ -50,12 +50,22 @@ Fluffy.prototype = {
       console.log(value)
     }
   },
-  filterFn (name) {
-    return (this.totals[name].count > 0)
+  filterFn (name, minMs) {
+    if (!this.totals[name].count) {
+      return false
+    }
+    if (minMs && (this.totals[name].lastTime < minMs)) {
+      return false
+    }
+    return true
   },
-  debugAll () {
+  debugAll (minMs) {
+    var fluffy = this
+    var min = minMs || 0
     return Object.keys(this.totals)
-      .filter(this.filterFn.bind(this))
+      .filter(function (name) {
+        return fluffy.filterFn(name, min)
+      })
       .map(this.formatFn.bind(this))
       .join(', ')
   }
