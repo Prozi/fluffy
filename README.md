@@ -2,7 +2,7 @@
 
 ## The purpouse
 
-Of course we all have Chrome&tm; Profiler, but what if...
+Of course we all have Chrome Profiler, but what if...
 
 What if we're so crazy to write a nodejs backend game?
 
