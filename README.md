@@ -1,14 +1,48 @@
 # Fluffy 🐱
 
-## installation
+## The purpouse
+
+Of course we all have Chrome&tm; Profiler, but what if...
+
+What if we're so crazy to write a nodejs backend game?
+
+Profiling in node has never been easier!
+
+Just plug in relevant `fluffy.time` and `fluffy.timeEnd` similar to `console.time` and `console.timeEnd` calls in your code
+
+It will collect the data, aggregate it, and if required at any moment (like once in a gameloop when in debugging mode)...
+
+Print it out with `fluffy.debugAll` or to lesser extent `fluffy.debug`.
+
+## Easy usage
+
+```javascript
+...
+
+// before function or at start, to start counter
+fluffy.time('your_function_1')
+// call whatever you need, do stuff, use processor
+your_function()
+// after function call or at end, to end counter
+fluffy.timeEnd('your_function_1')
+
+...
+
+// will print out if any of above functions* took more than 5ms
+fluffy.debugAll(5)
+
+...
+```
+
+## Installation
 
 `yarn install fluffy-memleak --save`
 
-## test
+## Test
 
 `yarn test`
 
-## the only docs you'll need
+## The only docs you'll need
 
 ```javascript
 // import Fluffy from 'fluffy-memleak'
