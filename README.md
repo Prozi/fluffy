@@ -1,6 +1,9 @@
 # Fluffy 🐱
 
-## The purpouse
+![512px](https://user-images.githubusercontent.com/36637989/42738742-eb36b04e-8880-11e8-8581-2528eaf4d993.png)
+
+
+## The purpose
 
 Of course we all have Chrome Profiler, but what if...
 
