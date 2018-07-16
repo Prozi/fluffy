@@ -1,7 +1,6 @@
 # Fluffy 🐱
 
-![512px](https://user-images.githubusercontent.com/36637989/42738742-eb36b04e-8880-11e8-8581-2528eaf4d993.png)
-
+![Fluffy Logo 512px](https://github.com/Prozi/fluffy/raw/master/logo/512px.png)
 
 ## The purpose
 
@@ -82,8 +81,12 @@ setTimeout(() => {
 
 ## Author
 
-Jacek Pietal
+Jacek Pietal: [Prozi](https://github.com/Prozi)
+
+Logo Author: [dee-y](https://github.com/dee-y)
 
 ## License
 
 License: MIT
+
+Logo License: Creative Commons Attribution 4.0 International License
